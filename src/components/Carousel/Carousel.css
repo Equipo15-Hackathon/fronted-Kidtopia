@@ -1,6 +1,6 @@
-.carousel.container {
-    width: 85%;
-    margin: 0 auto;
+.carousel-container {
+  width: 85%;
+  margin: 0 auto;
 }
 .images-container {
   display: flex;

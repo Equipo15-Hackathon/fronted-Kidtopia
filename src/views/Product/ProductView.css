@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Chewy&family=Fredoka:wght@400;700&display=swap");
+
+.main-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: 100vh;
+  color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.main-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  background-color: #f0f0f0;
+}
+
+.main-right {
+  display: flex;
+  justify-content: left;
+  align-items: top;
+  width: 50vw;
+  background-color: #e0e0e0;
+}
+
+.main-right h1 {
+  font-weight: bold;
+  font-size: 3em;
+  color: #f8d1bc;
+  font-family: "Chewy";
+}
+.content {
+  margin-left: 2vw;
+  margin-top: 20vh;
+  font-family: "Fredoka";
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.tabs button {
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: #b7c702;
+  font-family: "Fredoka";
+}
+
+.tabs button:hover {
+  background-color: #c8c5a5;
+}
+
+.tabs .active {
+  background-color: #c8c5a5;
+  color: white;
+}
+
+.tab-content {
+  border-top: 2px solid #ddd;
+  padding-top: 10px;
+}
+
+@media (max-width: 800px) {
+  .main-div {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .main-left,
+  .main-right {
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  .main-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center;
+    flex-grow: 1; 
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .content {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 90vw;
+    width: 100%;
+    overflow-wrap: break-word;
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tabs {
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
+
+  .tab-content {
+    flex-grow: 1; 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+};
+

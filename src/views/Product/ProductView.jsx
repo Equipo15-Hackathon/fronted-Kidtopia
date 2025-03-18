@@ -1,7 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import ImageCarousel from "../components/Carousel/Carousel";
-import "./Product.css";
+import ImageCarousel from "../../components/Carousel/Carousel";
+import "./ProductView.css";
+// import CartButton from "./components/ProductCard/CartButton/CartButton.jsx"
 
 export default function Product() {
   const [productName, setProductName] = useState("");
@@ -16,6 +17,7 @@ export default function Product() {
   const ageHeader = "Edad Recomendada: ";
   const descriptionHeader = "Descripción";
   const featuresHeader = "Características Técnicas";
+
   useEffect(() => {
     //test data
     setProductName("Juguete 1");
@@ -30,8 +32,9 @@ export default function Product() {
     setDescription(
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
     );
-    setFeatures("<strong>Dimensiones:</strong> 30 cm.<br><strong>Material:</strong> Plástico de alta calidad.<br><strong>No requiere baterías.</strong>");
-
+    setFeatures(
+      "<strong>Dimensiones:</strong> 30 cm.<br><strong>Material:</strong> Plástico de alta calidad.<br><strong>No requiere baterías.</strong>"
+    );
   }, []);
 
   return (
@@ -52,29 +55,30 @@ export default function Product() {
           <p className="recommended-age">
             <strong>{ageHeader}</strong> {age}
           </p>
+          {/* <CartButton /> */}
           <div className="tabs">
             <button
-              className={activeTab === "descripcion" ? "active" : ""}
+              className={activeTab === "description" ? "active" : ""}
               onClick={() => setActiveTab("descripcion")}
             >
-              Descripción
+              {descriptionHeader}
             </button>
             <button
-              className={activeTab === "caracteristicas" ? "active" : ""}
+              className={activeTab === "features" ? "active" : ""}
               onClick={() => setActiveTab("caracteristicas")}
             >
-              Características Técnicas
+              {featuresHeader}
             </button>
           </div>
           <div className="tab-content">
             {activeTab === "descripcion" ? (
               <p>{description}</p>
             ) : (
-              <p dangerouslySetInnerHTML={{ __html: features }}/>
+              <p dangerouslySetInnerHTML={{ __html: features }} />
             )}
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
