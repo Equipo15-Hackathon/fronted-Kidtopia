@@ -1,4 +1,4 @@
-# 🧸 Kidtopia - Toy Marketplace
+# 🐱 Kidtopia - Toy Marketplace
 
 Welcome to **Kidtopia**, the ultimate online marketplace for toys! 🏪🎠
 
