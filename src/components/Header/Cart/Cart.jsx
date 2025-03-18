@@ -24,9 +24,9 @@ export const Cart = () => {
                     </div>
                     <div className="quantity-container">
                         <div className="quantity-selection">
-                            <button onClick={() => updateQuantity(name, 1)}>+</button>
-                            <p className="quantity">{quantity}</p>
                             <button className="decrease" onClick={() => updateQuantity(name, -1)}>-</button>
+                            <p className="quantity">{quantity}</p>
+                            <button onClick={() => updateQuantity(name, 1)}>+</button>
                         </div>
                         <div className="delete-product">
                             <button className="delete-btn" onClick={() => removeProduct(name)}>
