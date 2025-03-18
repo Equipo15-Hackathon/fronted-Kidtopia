@@ -1,7 +1,6 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Fredoka', sans-serif;
   line-height: 1.5;
-  font-weight: 400;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -13,11 +12,21 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+@font-face {
+  font-family: 'Chewy';
+  src: url('/src/assets/fonts/Chewy/Chewy-Regular.ttf') format('truetype');
+
+}
+@font-face {
+  font-family: 'Fredoka';
+  src: url('/src/assets/fonts/Fredoka/Fredoka-VariableFont_wdth\,wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
   }
-
 }
