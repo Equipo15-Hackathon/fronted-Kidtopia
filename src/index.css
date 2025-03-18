@@ -25,6 +25,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Fredoka';
+  src: url('/src/assets/fonts/Fredoka/static/Fredoka-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
