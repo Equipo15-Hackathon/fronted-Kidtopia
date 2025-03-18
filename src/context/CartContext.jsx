@@ -7,7 +7,7 @@ export const CartProvider = ({ children }) => {
     const storedCart = localStorage.getItem("cartItems");
         return storedCart ? JSON.parse(storedCart) : {};
     });
-    const [isCartOpen, setIsCartOpen] = useState(true);
+    const [isCartOpen, setIsCartOpen] = useState(false);
 
     const toggleCart = () => {
         setIsCartOpen((prev) => !prev);
