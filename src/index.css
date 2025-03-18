@@ -2,6 +2,7 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: rgb(255, 159, 159);
+  margin: 0;
 }
 
 :root {
