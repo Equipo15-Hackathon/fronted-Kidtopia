@@ -1,8 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import ImageCarousel from "../../components/Carousel/Carousel";
+import { CartButton } from "../../components/ProductCard/CartButton/CartButton.jsx"
 import "./ProductView.css";
-// import CartButton from "./components/ProductCard/CartButton/CartButton.jsx"
 
 export default function Product() {
   const [productName, setProductName] = useState("");
@@ -33,7 +33,7 @@ export default function Product() {
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
     );
     setFeatures(
-      "<strong>Dimensiones:</strong> 30 cm.<br><strong>Material:</strong> Plástico de alta calidad.<br><strong>No requiere baterías.</strong>"
+      "<b>Dimensiones:</b> 30 cm.<br><b>Material:</b> Plástico de alta calidad.<br><b>No requiere baterías.</b>"
     );
   }, []);
 
@@ -46,16 +46,16 @@ export default function Product() {
         <div className="content">
           {" "}
           <h1>
-            <strong>{productName}</strong>
+            <b>{productName}</b>
           </h1>
           <p className="brand">
-            <strong>{brandHeader}</strong>
+            <b>{brandHeader}</b>
             {brand}
           </p>
           <p className="recommended-age">
-            <strong>{ageHeader}</strong> {age}
+            <b>{ageHeader}</b> {age}
           </p>
-          {/* <CartButton /> */}
+          <CartButton />
           <div className="tabs">
             <button
               className={activeTab === "description" ? "active" : ""}
