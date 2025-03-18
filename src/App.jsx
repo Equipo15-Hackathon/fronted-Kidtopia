@@ -1,13 +1,12 @@
-import { useState } from 'react'
 import './App.css'
-import { CartButton } from './components/ProductCard/CartButton/CartButton'
+import { Cart } from './components/Header/Cart/Cart'
 
 function App() {
 
 
   return (
     <>
-      <CartButton />
+      <Cart />
     </>
   )
 }

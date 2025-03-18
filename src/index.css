@@ -12,6 +12,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+button {
+  cursor: pointer;
+}
+
 @font-face {
   font-family: 'Chewy';
   src: url('/src/assets/fonts/Chewy/Chewy-Regular.ttf') format('truetype');
