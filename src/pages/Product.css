@@ -1,0 +1,12 @@
+.main-div {
+    display: "flex"; 
+    justify-content: "flex-start"; 
+    align-items: "center"; 
+    height: "100vh";
+}
+.main-left {
+    flex: 1;
+}
+.main-right {
+    flex: 2;
+}
