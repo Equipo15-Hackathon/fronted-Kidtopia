@@ -2,7 +2,10 @@ import './Cart.css'
 import { useCart } from '../../../context/CartContext'; 
 
 export const Cart = () => {
-    const { cartItems, updateQuantity, removeProduct } = useCart();
+    const { cartItems, updateQuantity, removeProduct, isCartOpen, toggleCart } = useCart();
+    
+    if (!isCartOpen) return null;
+
     const total = Object.values(cartItems)
     .reduce((acc, item) => acc + item.price * item.quantity, 0)
     .toFixed(2);
@@ -10,7 +13,7 @@ export const Cart = () => {
     return (
         <div className="cart-container">
             <h2 className="title">Mi cesta</h2>
-            <button className="close-btn">
+            <button className="close-btn" onClick={toggleCart}>
                 <img src="/img/close-icon.png" alt="close-icon" className="close-cart" />
             </button>
             {Object.entries(cartItems).map(([name, { price, quantity }]) => (

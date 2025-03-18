@@ -3,7 +3,15 @@ import { createContext, useContext, useState, useEffect } from "react";
 const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
-    const [cartItems, setCartItems] = useState(() => JSON.parse(localStorage.getItem("cartItems")) || {});
+    const [cartItems, setCartItems] = useState(() => {
+    const storedCart = localStorage.getItem("cartItems");
+        return storedCart ? JSON.parse(storedCart) : {};
+    });
+    const [isCartOpen, setIsCartOpen] = useState(false);
+
+    const toggleCart = () => {
+        setIsCartOpen((prev) => !prev);
+    };
 
     useEffect(() => {
         localStorage.setItem("cartItems", JSON.stringify(cartItems));
@@ -12,7 +20,9 @@ export const CartProvider = ({ children }) => {
     const addProduct = (name, price) => {
         setCartItems(prev => ({
             ...prev,
-            [name]: prev[name] ? { ...prev[name], quantity: prev[name].quantity + 1 } : { price, quantity: 1 },
+            [name]: prev[name]
+            ? { ...prev[name], quantity: prev[name].quantity + 1 }
+            : { price, quantity: 1 },
         }));
     };
 
@@ -32,7 +42,7 @@ export const CartProvider = ({ children }) => {
     };
 
     return (
-        <CartContext.Provider value={{ cartItems, addProduct, removeProduct, updateQuantity }}>
+        <CartContext.Provider value={{ cartItems, addProduct, removeProduct, updateQuantity, isCartOpen, toggleCart }}>
             {children}
         </CartContext.Provider>
     );
