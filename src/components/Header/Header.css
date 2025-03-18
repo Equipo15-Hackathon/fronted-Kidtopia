@@ -16,6 +16,16 @@
     margin-left: 5px;
 }
 
+.home-button {
+    padding: 0;
+    border: none;
+    background: none;
+    display: flex;
+    align-items: center;
+    font-family: 'Chewy', sans-serif;
+    font-size: 20px;
+}
+
 .header-button {
     width: 50px;
     padding: 0;
@@ -24,7 +34,7 @@
 }
 
 .logo {
-    width: 50px;
+    width: 60px;
 }
 
 .catalog {
