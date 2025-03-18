@@ -17,7 +17,7 @@ export default function Carousel({ images }) {
   return (
     <div
       className="carousel-container"
-      style={{ width: "600px", margin: "0 auto" }}
+      style={{ width: "85%", margin: "0 auto" }}
     >
       <Slider {...settings}>
         {Array.isArray(images) && images.length > 0 ? (
