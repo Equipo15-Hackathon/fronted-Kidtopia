@@ -6,9 +6,9 @@ export const Cart = () => {
     
     if (!isCartOpen) return null;
 
-    const total = Object.values(cartItems)
-    .reduce((acc, item) => acc + item.price * item.quantity, 0)
-    .toFixed(2);
+    const total = Object.values(cartItems).lenght
+    ? Object.values(cartItems).reduce((acc, item) => acc + item.price * item.quantity, 0).toFixed(2)
+    : "0.00";
 
     return (
         <div className="cart-container">
