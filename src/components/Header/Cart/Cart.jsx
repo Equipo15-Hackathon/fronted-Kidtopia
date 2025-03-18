@@ -1,31 +1,39 @@
 import './Cart.css'
-import { useState, useEffect } from 'react';
+import { useCart } from '../../../context/CartContext'; 
 
 export const Cart = () => {
-    
+    const { cartItems, updateQuantity, removeProduct } = useCart();
+    const total = Object.values(cartItems)
+    .reduce((acc, item) => acc + item.price * item.quantity, 0)
+    .toFixed(2);
+
     return (
         <div className="cart-container">
-                <h2 className="title">Mi cesta</h2>
+            <h2 className="title">Mi cesta</h2>
             <button className="close-btn">
                 <img src="/img/close-icon.png" alt="close-icon" className="close-cart" />
             </button>
-            <div className="product-container">
-                 <div className="product-details">
-                  <h3 className='toy-name'>nombre</h3>
-                  <h5 className='toy-price'>precio €</h5>
+            {Object.entries(cartItems).map(([name, { price, quantity }]) => (
+                <div key={name} className="product-container">
+                    <div className="product-details">
+                        <h3 className="toy-name">{name}</h3>
+                        <h3 className="toy-price">{price.toFixed(2)}€</h3>
+                    </div>
+                    <div className="quantity-container">
+                        <div className="quantity-selection">
+                            <button onClick={() => updateQuantity(name, 1)}>+</button>
+                            <p className="quantity">{quantity}</p>
+                            <button className="decrease" onClick={() => updateQuantity(name, -1)}>-</button>
+                        </div>
+                        <div className="delete-product">
+                            <button className="delete-btn" onClick={() => removeProduct(name)}>
+                                <img src="/img/delete-icon.png" alt="delete-icon" className="delete-icon" />
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div className="quantity-container">
-                  <button className="increase">+</button>
-                  <p className="quantity">cantidad</p>
-                  <button className="decrease">-</button>
-                </div>
-                <div className="delete-product">
-                    <button className="delete-btn">
-                        <img src="/img/delete-icon.png" alt="delete-icon" className="delete-icon" />
-                    </button>
-                </div>
-                <h3 className='total'>Total: total€</h3>
-            </div>
+            ))}
+            <h3 className="total">Total: {total}€</h3>
         </div>
-    )
+    );
 }
