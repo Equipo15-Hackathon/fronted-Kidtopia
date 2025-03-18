@@ -1,0 +1,14 @@
+.carousel.container {
+    width: 85%;
+    margin: 0 auto;
+}
+.images-container {
+  display: flex;
+  justify-content: center;
+}
+.image-display {
+  max-height: 80vh;
+  width: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+}

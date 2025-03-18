@@ -17,24 +17,18 @@ export default function Carousel({ images }) {
   return (
     <div
       className="carousel-container"
-      style={{ width: "85%", margin: "0 auto" }}
     >
       <Slider {...settings}>
         {Array.isArray(images) && images.length > 0 ? (
           images.map((img, index) => (
             <div
+              className="images-container"
               key={index}
-              style={{ display: "flex", justifyContent: "center" }}
             >
               <img
+                className="image-display"
                 src={img}
                 alt={`Slide ${index + 1}`}
-                style={{
-                  maxHeight: "80vh",
-                  width: "100%",
-                  objectFit: "contain",
-                  borderRadius: "10px",
-                }}
               />
             </div>
           ))

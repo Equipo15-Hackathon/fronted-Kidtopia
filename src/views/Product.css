@@ -22,10 +22,35 @@
   }
   
   .main-right h1 {
-    margin: 0;
-    font-size: 2em;
+    font-weight: bold;
+    font-size: 3em;
+  }
+  .content {
     margin-left: 2vw;
     margin-top: 20vh;
+  }
+
+  .tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .tabs button {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #eee;
+  }
+  
+  .tabs .active {
+    background-color: #1a73e8;
+    color: white;
+  }
+  
+  .tab-content {
+    border-top: 2px solid #ddd;
+    padding-top: 10px;
   }
   
   
