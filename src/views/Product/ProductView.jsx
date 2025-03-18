@@ -46,14 +46,14 @@ export default function Product() {
         <div className="content">
           {" "}
           <h1>
-            <b>{productName}</b>
+            <strong>{productName}</strong>
           </h1>
           <p className="brand">
-            <b>{brandHeader}</b>
+            <strong>{brandHeader}</strong>
             {brand}
           </p>
           <p className="recommended-age">
-            <b>{ageHeader}</b> {age}
+            <strong>{ageHeader}</strong> {age}
           </p>
           <CartButton />
           <div className="tabs">
