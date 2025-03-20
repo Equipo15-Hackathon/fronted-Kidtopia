@@ -25,12 +25,19 @@
     font-family: 'Chewy', sans-serif;
     font-size: 20px;
 }
+.searcher-button {
+    width: fit-content;
+    padding: 0;
+    border: none;
+    background: none;
+}
 
-.header-button {
+.cart-button {
     width: 50px;
     padding: 0;
     border: none;
     background: none;
+    margin-right: 3%;
 }
 
 .logo {
@@ -50,7 +57,7 @@
 }
 
 .search-icon {
-    width: 25px;
+    
 }
 
 .cart-icon {

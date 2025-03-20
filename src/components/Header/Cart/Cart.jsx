@@ -1,7 +1,7 @@
 import './Cart.css'
 import { useCart } from '../../../context/CartContext'; 
 
-export const Cart = () => {
+const Cart = () => {
     const { cartItems, updateQuantity, removeProduct, isCartOpen, toggleCart } = useCart();
     
     if (!isCartOpen) return null;
@@ -42,3 +42,5 @@ export const Cart = () => {
         </div>
     );
 }
+
+export default Cart;
