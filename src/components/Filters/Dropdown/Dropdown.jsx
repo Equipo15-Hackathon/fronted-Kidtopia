@@ -6,6 +6,7 @@ const Dropdown = ({ ageRange, brands, filterProducts, resetFilters }) => {
     return (
       <div className="dropdown">
         <button className="reset" onClick={resetFilters}>Reset</button>
+        <div className="dropdown-sections">
         <div className="dropdown-section">
           <h3 className='filter-title'>Rango de Edades</h3>
           <ul>
@@ -31,6 +32,7 @@ const Dropdown = ({ ageRange, brands, filterProducts, resetFilters }) => {
               </li>
             ))}
           </ul>
+        </div>
         </div>
       </div>
     );

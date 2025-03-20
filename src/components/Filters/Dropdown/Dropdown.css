@@ -8,7 +8,12 @@
   display: flex;
   width: 30vw;
   padding: 1% 0;
+  flex-direction: column;
 }
+
+.dropdown-sections {
+    display: flex;
+  }
 
 .dropdown-section {
   flex: 1;
@@ -29,10 +34,20 @@
     color: #FB7F0D;
     text-decoration: underline;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .reset {
     background: none;
     border: none;
     color: black;
+    margin: 0 5%;
+    padding: 0;
+    text-align: right;
+}
+
+.reset:hover {
+    color: #FB7F0D;
+    text-decoration: underline;
+    font-weight: bold;
 }
