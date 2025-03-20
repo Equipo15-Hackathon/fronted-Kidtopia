@@ -1,10 +1,12 @@
 import './CatalogView.css';
+import { useState } from 'react';
 import { ProductCard } from '../../components/ProductCard/ProductCard';
 import Filter from '../../components/Filters/Filter';
 import { useFilters } from '../../../hooks/useFilters';
+import SideBar from '../../components/SideBar/SideBar';
 
 const CatalogView = () => {
-  
+  const [open, setOpen] = useState(false);
     const products = [
         { name: "Muñeca", price: 10.99, image: "/img/doll.png", ageRange: "3-5 años", brand: "Mattel" },
         { name: "Carro", price: 15.50, image: "/img/cart-toy.png", ageRange: "0-2 años", brand: "Hasbro" },
@@ -25,14 +27,17 @@ const CatalogView = () => {
   const categoryTitle = ["Juguetes"];
   
   return (
-      <div className="catalog-view">
-        <h1 className="category-title">{categoryTitle}</h1>
-        <Filter filterProducts={filterProducts} resetFilters={resetFilters}/>
-      
-        <div className="products-container">
-          {filteredProducts.map((product) => (
-            <ProductCard key={product.name} {...product} />
-          ))}
+      <div className={`catalog-view ${open ? "sidebar-open" : ""}`}>
+        <SideBar open={open} setOpen={setOpen}/>
+        <div className="catalog-container">
+          <h1 className="category-title">{categoryTitle}</h1>
+          <Filter filterProducts={filterProducts} resetFilters={resetFilters}/>
+
+          <div className="products-container">
+            {filteredProducts.map((product) => (
+              <ProductCard key={product.name} {...product} />
+            ))}
+          </div>
         </div>
     </div>
   )

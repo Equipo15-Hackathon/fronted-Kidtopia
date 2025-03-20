@@ -1,13 +1,25 @@
 .catalog-view {
-  width: 100%;
+  width: 100vw;
+  display: flex;
+  align-items: flex-start;
+}
+
+.catalog-container {
+width: 100%;
+transition: width 0.3s ease-in-out;
 }
 
 .category-title {
-  margin: 0;
+  margin: 0 ;
 }
 
 .products-container {
   display: flex;
   flex-wrap: wrap;
   gap: 1%;
+  width: 100%;
+}
+
+.catalog-view.sidebar-open .catalog-container {
+  margin-left: 5%;
 }

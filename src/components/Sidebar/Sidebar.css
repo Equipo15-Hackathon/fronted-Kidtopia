@@ -1,9 +1,6 @@
-/* IMPORTED HERE FOR BUG WITH CONFLICT IN IMPORT OF FONTS IN MAIN.CSS */
-@import url("https://fonts.googleapis.com/css2?family=Chewy&family=Fredoka:wght@400;700&display=swap");
-
 .sidebar-container {
   position: relative;
-  height: 100vh;
+  height: 100%;
 }
 
 .toggle-button {
@@ -14,14 +11,13 @@
   border: none;
   cursor: pointer;
   font-size: 2.5vh;
-  color: white;
+  color: black;
 }
 
 .sidebar {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
-  width: 15vw;
   height: 100%;
   background-color: white;
   color: black;
@@ -32,10 +28,12 @@
 
 .sidebar.open {
   transform: translateX(0);
+  width: 15vw;
 }
 
 .sidebar.closed {
   transform: translateX(-100%);
+  width: 0;
 }
 
 .sidebar-title {
@@ -49,7 +47,6 @@
 .sidebar-list {
   list-style: none;
   padding: 0;
-  font-family: "Fredoka";
 }
 
 .sidebar-item {
