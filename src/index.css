@@ -1,15 +1,26 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(255, 159, 159);
+  margin: 0;
+}
+
 :root {
   font-family: 'Fredoka', sans-serif;
   line-height: 1.5;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: black;
   background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  cursor: pointer;
 }
 
 @font-face {
@@ -29,7 +40,7 @@
   font-family: 'Fredoka';
   src: url('/src/assets/fonts/Fredoka/static/Fredoka-Bold.ttf') format('truetype');
   font-weight: bold;
-  font-style: normal;
+  font-style: bold;
 }
 
 @media (prefers-color-scheme: light) {
@@ -37,4 +48,5 @@
     color: #213547;
     background-color: #ffffff;
   }
-}
+
+
