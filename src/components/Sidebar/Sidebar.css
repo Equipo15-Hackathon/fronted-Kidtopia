@@ -1,33 +1,41 @@
 /* IMPORTED HERE FOR BUG WITH CONFLICT IN IMPORT OF FONTS IN MAIN.CSS */
 @import url("https://fonts.googleapis.com/css2?family=Chewy&family=Fredoka:wght@400;700&display=swap");
 
-.sidebar-container {
-  position: relative;
-  height: 100vh;
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8vh;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2vw;
+  box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
 .toggle-button {
-  position: absolute;
-  top: 2vh;
-  left: 70vw;
   background: none;
   border: none;
   cursor: pointer;
   font-size: 2.5vh;
-  color: white;
+  color: black;
 }
 
 .sidebar {
   position: fixed;
-  top: 0;
+  top: 8vh;
   left: 0;
   width: 15vw;
-  height: 100%;
+  height: calc(100% - 8vh);
   background-color: white;
   color: black;
   padding: 2vh;
   box-shadow: 0.5vw 0 1vw rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out;
+  z-index: 999;
 }
 
 .sidebar.open {
@@ -65,3 +73,25 @@
 .sidebar-item:hover {
   background-color: grey;
 }
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 60vw;
+  }
+};
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 80vw;
+  }
+  .toggle-button {
+    font-size: 3vh;
+  }
+  .sidebar-title {
+    font-size: 2.5vh;
+  }
+  .sidebar-item {
+    gap: 2vw;
+    padding: 2vh;
+  }
+};
