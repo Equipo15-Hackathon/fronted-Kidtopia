@@ -47,7 +47,7 @@ export default function Contact() {
         `${formData.fullName} - Contact request`
       );
       const body = encodeURIComponent(
-        `User email: ${formData.email}\n\n${formData.message}`
+        `Request email: ${formData.email}\n\n Message: ${formData.message}`
       );
       window.location.href = `mailto:kidtopia.contact@gmail.com?subject=${subject}&body=${body}`;
     }
