@@ -31,8 +31,8 @@ const CatalogView = () => {
 
   return (
     <div className={`catalog-view ${open ? "sidebar-open" : ""}`}>
-      <button className="sidebar-toggle-button" onClick={() => setOpen(!open)}>
-        ☰ Categorías
+      <button className={`categories-button ${open ? "open" : ""}`} onClick={() => setOpen(!open)}>
+        {open ? "☰" : "☰ Categorías"}
       </button>
 
       <SideBar open={open} setOpen={setOpen} setSelectedCategory={setSelectedCategory} />
