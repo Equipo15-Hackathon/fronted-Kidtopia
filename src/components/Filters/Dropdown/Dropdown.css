@@ -1,0 +1,32 @@
+ .dropdown {
+  position: absolute;
+  right: 0;
+  background: #F8D1BC;
+  border: none;
+  border-radius: 4px 0 4px 4px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  width: 30vw;
+  padding: 1% 0;
+}
+
+.dropdown-section {
+  flex: 1;
+}
+
+.filter-title {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+  
+  
+.filter-item {
+    font-size: 14px;
+    margin-bottom: 1.5%;
+}
+
+.filter-item:hover {
+    color: #FB7F0D;
+    text-decoration: underline;
+    font-weight: bold;
+}

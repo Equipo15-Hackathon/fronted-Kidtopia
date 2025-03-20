@@ -1,0 +1,13 @@
+.catalog-view {
+
+}
+
+.category-title {
+  margin: 0;
+}
+
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1%;
+}

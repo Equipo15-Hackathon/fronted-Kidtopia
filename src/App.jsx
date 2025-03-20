@@ -2,26 +2,17 @@ import './App.css'
 import { Cart } from './components/Header/Cart/Cart'
 import { Header } from './components/Header/Header'
 import { CartProvider } from './context/CartContext'
+import CatalogView from './views/CatalogView/CatalogView'
 function App() {
-  const products = [
-    { name: "Muñeca", price: 10.99, image: "/img/doll.png" },
-    { name: "Carro", price: 15.50, image: "/img/cart-toy.png" },
-    { name: "Coche", price: 19.99, image: "/img/car.png", }
-];
+
 
   return (
-
     <CartProvider>
       <Header />
-      <Cart />           
-      <Cart />          
-      <div className="catalog-view">
-        {products.map((product) => (
-          <ProductCard key={product.name} {...product} />
-        ))}
-      </div>
+      <Cart />
+      <CatalogView />           
     </CartProvider>
   )
 }
 
-export default App
+export default App;
