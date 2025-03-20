@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import "./Searcher.css";
 
-export const Searcher = () => {
+const Searcher = () => {
     const [isOpen, setIsOpen] = useState(false);
     const searchRef = useRef(null);
 
@@ -34,3 +34,5 @@ export const Searcher = () => {
         </div>
     );
 };
+
+export default Searcher;

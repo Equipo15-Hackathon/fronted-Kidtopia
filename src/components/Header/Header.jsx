@@ -1,8 +1,8 @@
 import './Header.css'
 import { useCart } from '../../context/CartContext'
-import {Searcher} from "./Searcher/Searcher.jsx";
+import Searcher from "./Searcher/Searcher.jsx";
 
-export const Header = () => {
+const Header = () => {
     const { toggleCart } = useCart();
 
     return (
@@ -25,3 +25,5 @@ export const Header = () => {
         </div>
     )
 }
+
+export default Header;
