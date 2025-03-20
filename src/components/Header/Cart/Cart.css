@@ -1,5 +1,6 @@
 .cart-container {
     width: 30vw;
+    height: -webkit-fill-available;
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -7,6 +8,7 @@
     padding: 1.5% 3%;
     background-color: #F8D1BC;
     border-radius: 10px 0 0 10px;
+    justify-content: space-between;
 }
 
 .close-btn {
