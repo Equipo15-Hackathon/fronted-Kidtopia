@@ -1,6 +1,7 @@
 import './Header.css'
 import { useCart } from '../../context/CartContext'
 import Searcher from "./Searcher/Searcher.jsx";
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const { toggleCart } = useCart();
@@ -8,11 +9,13 @@ const Header = () => {
     return (
         <div className="header">
             <div className="left-section">
-                <button className="home-button">
+                <Link to="/home" className="home-button">
                     <img src="/img/logo.png" alt="logo" className="logo" />
                     KidTopia
-                </button>
-                <p className="catalog">Catálogo</p>
+                </Link>
+                <Link to="/catalog">
+                    <p className="catalog">Catálogo</p>
+                </Link>
             </div>
             <div className="right-section">
                 <button className="searcher-button">
