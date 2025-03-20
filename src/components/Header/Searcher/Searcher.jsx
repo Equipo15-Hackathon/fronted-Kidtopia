@@ -3,7 +3,7 @@ import "./Searcher.css";
 
 export const Searcher = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const searchRef = useRef(null); // Referencia para detectar clics fuera
+    const searchRef = useRef(null);
 
 
     useEffect(() => {
