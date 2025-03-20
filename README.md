@@ -43,8 +43,13 @@ We welcome contributions! To contribute:
 4. Push the changes (`git push origin feature-name`)
 5. Open a Pull Request 🚀
 
-## 📜 License
-This project is licensed under the **MIT License**.
+## 🛠 Backend Repository
+
+The backend of Kidtopia is built with Laravel. You can access the repository at the following link:
+
+[Kidtopia Backend Repository](https://github.com/Equipo15-Hackathon/kidtopia.git)
+
+
 
 ---
 
