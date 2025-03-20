@@ -1,0 +1,48 @@
+.header {
+    display: flex;
+    background-color: #FB7F0D;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+}
+
+.left-section {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: left;
+    gap: 5%;
+    margin-left: 5px;
+}
+
+.header-button {
+    width: 50px;
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+.logo {
+    width: 50px;
+}
+
+.catalog {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+}
+
+.right-section {
+    display: flex;
+    width: 50%;
+    justify-content: right;
+}
+
+.search-icon {
+    width: 25px;
+}
+
+.cart-icon {
+    width: 23px;
+}
