@@ -34,9 +34,9 @@ const TestApi = () => {
               price: 19.99,
               stock: 50,
               image: "https://via.placeholder.com/150",
-              category_id: 1, // Asegúrate de que esta categoría exista en la DB
-              brand_id: 1, // Asegúrate de que esta marca exista en la DB
-              age_range_id: 1, // Asegúrate de que este rango de edad exista en la DB
+              category_id: 2, 
+              brand_id: 2, 
+              age_range_id: 2, 
             })
           )
         }
@@ -50,14 +50,26 @@ const TestApi = () => {
       {/* Marcas */}
       <h3>Marcas</h3>
       <button onClick={() => handleRequest(brandsRequest.getBrands)}>GET Brands</button>
-      <button onClick={() => handleRequest(() => brandsRequest.createBrand({ name: "Nueva Marca" }))}>POST Brand</button>
+
+      <button 
+        onClick={() => handleRequest(() => brandsRequest.createBrand({ name: "NuevaMarca" }))}
+      >
+        POST Brand
+      </button>
+
       <button onClick={() => handleRequest(() => brandsRequest.updateBrand(1, { name: "Marca Actualizada" }))}>PUT Brand</button>
       <button onClick={() => handleRequest(() => brandsRequest.deleteBrand(1))}>DELETE Brand</button>
 
       {/* Categorías */}
       <h3>Categorías</h3>
       <button onClick={() => handleRequest(categoriesRequest.getCategories)}>GET Categories</button>
-      <button onClick={() => handleRequest(() => categoriesRequest.createCategory({ name: "Nueva Categoría" }))}>POST Category</button>
+
+      <button 
+        onClick={() => handleRequest(() => categoriesRequest.createCategory({ name: "NuevaCategoria" }))}
+      >
+        POST Category
+      </button>
+
       <button onClick={() => handleRequest(() => categoriesRequest.updateCategory(1, { name: "Categoría Actualizada" }))}>PUT Category</button>
       <button onClick={() => handleRequest(() => categoriesRequest.deleteCategory(1))}>DELETE Category</button>
 

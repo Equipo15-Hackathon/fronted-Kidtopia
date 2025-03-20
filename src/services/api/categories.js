@@ -6,21 +6,31 @@ const requestWithTimeout = async (method, url, data = null, timeout = 5000) => {
   const controller = new AbortController();
   const signal = controller.signal;
 
-  //Abort request after timeout
+  //Abort the request if it takes more than the timeout
   const timeoutId = setTimeout(() => controller.abort(), timeout);
 
   try {
-    const config = { method, url, data, signal };
-    const response = await axios(config);
-    return response.data;
+      const config = { 
+          method, 
+          url, 
+          data, 
+          signal, 
+          headers: {
+              "Content-Type": "application/json",
+              "Accept": "application/json"
+          }
+      };
+      const response = await axios(config);
+      clearTimeout(timeoutId);
+      return response.data;
   } catch (error) {
-    if (axios.isCancel(error)) {
-      console.error("Timeout error:", error);
-    } else {
-      console.error("Error while fetching data:", error);
-    }
-  } finally {
-    clearTimeout(timeoutId);
+      clearTimeout(timeoutId);
+      if (axios.isCancel(error)) {
+          console.error("Timeout error:", error);
+      } else {
+          console.error("Error while fetching data:", error.response ? error.response.data : error.message);
+      }
+      return null;
   }
 };
 
