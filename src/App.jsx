@@ -1,14 +1,18 @@
-import './App.css';
-
-import { Footer } from './components/Footer/Footer';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Footer } from "./components/Footer/Footer";
 
 function App() {
     return (
-        <div>
+        <Router>
+            <Routes>
+            </Routes>
             <Footer />
-        </div>
+        </Router>
     );
 }
 
+const Contact = () => <h1>Formulario de Contacto (Próximamente)</h1>;
+
 export default App;
+
 
