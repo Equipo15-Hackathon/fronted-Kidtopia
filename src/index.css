@@ -1,3 +1,9 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(255, 159, 159);
+}
+
 :root {
   font-family: 'Fredoka', sans-serif;
   line-height: 1.5;
@@ -27,6 +33,13 @@ button {
   src: url('/src/assets/fonts/Fredoka/Fredoka-VariableFont_wdth\,wght.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fredoka';
+  src: url('/src/assets/fonts/Fredoka/static/Fredoka-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: bold;
 }
 
 @media (prefers-color-scheme: light) {

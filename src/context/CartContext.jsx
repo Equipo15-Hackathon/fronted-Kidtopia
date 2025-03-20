@@ -37,7 +37,13 @@ export const CartProvider = ({ children }) => {
         setCartItems(prev => {
             if (!prev[name]) return prev;
             const newQuantity = prev[name].quantity + amount;
-            return newQuantity > 0 ? { ...prev, [name]: { ...prev[name], quantity: newQuantity } } : removeProduct(name);
+    
+            if (newQuantity <= 0) {
+                const { [name]: _, ...rest } = prev;
+                return rest;
+            }
+    
+            return { ...prev, [name]: { ...prev[name], quantity: newQuantity } };
         });
     };
 

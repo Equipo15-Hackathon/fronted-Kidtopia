@@ -6,9 +6,9 @@ export const Cart = () => {
     
     if (!isCartOpen) return null;
 
-    const total = Object.values(cartItems)
-    .reduce((acc, item) => acc + item.price * item.quantity, 0)
-    .toFixed(2);
+    const total = Object.values(cartItems).lenght
+    ? Object.values(cartItems).reduce((acc, item) => acc + item.price * item.quantity, 0).toFixed(2)
+    : "0.00";
 
     return (
         <div className="cart-container">
@@ -24,9 +24,9 @@ export const Cart = () => {
                     </div>
                     <div className="quantity-container">
                         <div className="quantity-selection">
-                            <button onClick={() => updateQuantity(name, 1)}>+</button>
-                            <p className="quantity">{quantity}</p>
                             <button className="decrease" onClick={() => updateQuantity(name, -1)}>-</button>
+                            <p className="quantity">{quantity}</p>
+                            <button onClick={() => updateQuantity(name, 1)}>+</button>
                         </div>
                         <div className="delete-product">
                             <button className="delete-btn" onClick={() => removeProduct(name)}>

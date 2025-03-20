@@ -1,6 +1,6 @@
 import './App.css'
 import { Cart } from './components/Header/Cart/Cart'
-import { ProductCard } from './components/ProductCard/ProductCard'
+import { Header } from './components/Header/Header'
 import { CartProvider } from './context/CartContext'
 function App() {
   const products = [
@@ -12,6 +12,8 @@ function App() {
   return (
 
     <CartProvider>
+      <Header />
+      <Cart />           
       <Cart />          
       <div className="catalog-view">
         {products.map((product) => (
