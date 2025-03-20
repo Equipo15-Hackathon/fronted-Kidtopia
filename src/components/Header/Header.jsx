@@ -15,10 +15,10 @@ export const Header = () => {
                 <p className="catalog">Catálogo</p>
             </div>
             <div className="right-section">
-                <button className="header-button">
+                <button className="searcher-button">
                     <Searcher />
                 </button>
-                <button className="header-button" onClick={toggleCart}>
+                <button className="cart-button" onClick={toggleCart}>
                     <img src="/img/cart.png" alt="cart-icon" className="cart-icon" />
                 </button>
             </div>
