@@ -9,7 +9,7 @@ const Header = () => {
     return (
         <div className="header">
             <div className="left-section">
-                <Link to="/home" className="home-button">
+                <Link to="/" className="home-button">
                     <img src="/img/logo.png" alt="logo" className="logo" />
                     KidTopia
                 </Link>

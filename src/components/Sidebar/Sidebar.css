@@ -1,0 +1,30 @@
+.sidebar-container {
+  position: relative;
+  width: 0;
+  overflow: hidden;
+  transition: width 0.3s ease-in-out;
+  height: 0;
+}
+
+.sidebar-title {
+  color: #f8d1bc;
+}
+
+.sidebar-container.open {
+  width: 25vw;
+  height: 100%;
+}
+
+.sidebar-list {
+  text-align: left;
+}
+.sidebar-item {
+  margin-top: 2vh;
+  cursor: pointer;
+}
+
+.sidebar {
+  background-color: white;
+  padding: 20px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
