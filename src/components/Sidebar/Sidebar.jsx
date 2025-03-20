@@ -20,9 +20,6 @@ export default function Sidebar({ open, setOpen, setSelectedCategory }) {
   return (
     <div className={`sidebar-container ${open ? "open" : ""}`}>
       <div className="sidebar">
-        <button className="toggle-button" onClick={() => setOpen(!open)}>
-          <Icon icon="teenyicons:x-outline" width={24} height={24} />
-        </button>
         <h2 className="sidebar-title">Categorías</h2>
         <ul className="sidebar-list">
           {categories.map((category, index) => (

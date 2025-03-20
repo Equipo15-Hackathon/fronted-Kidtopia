@@ -7,11 +7,6 @@
     font-weight: bold;
 }
 
-.product-card:hover {
-    box-shadow: 0 0 4px 0.5px #72727254;
-    border-radius: 10px;
-}
-
 .toy-img {
     width: 100%;
 }
