@@ -1,0 +1,16 @@
+.searcher {
+    background-color: white;
+    display: flex;
+    width: 20vw;
+    position: absolute;
+    right: 5%;
+    border-radius: 10px;
+    padding: 1%;
+}
+
+.search-input {
+    background: none;
+    border: none;
+    color: black;
+    margin-left: 5%;
+}

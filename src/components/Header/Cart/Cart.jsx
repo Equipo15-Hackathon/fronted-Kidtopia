@@ -6,7 +6,7 @@ export const Cart = () => {
     
     if (!isCartOpen) return null;
 
-    const total = Object.values(cartItems).lenght
+    const total = Object.values(cartItems).length
     ? Object.values(cartItems).reduce((acc, item) => acc + item.price * item.quantity, 0).toFixed(2)
     : "0.00";
 
