@@ -11,10 +11,8 @@ Kidtopia is a user-friendly platform where buyers and sellers can connect to pur
 - 🔍 **Advanced Search & Filters** – Easily find your favorite toys.
 
 ## 🏗️ Tech Stack
-- **Frontend:** React (Vite) ⚛️
-- **Backend:** (To be defined)
-- **Database:** (To be defined)
-- **Deployment:** (To be defined)
+- **Frontend:** React (Vite), JavaScript, CSS, HTML
+- **Backend:** PHP, XAMPP, Laravel
 
 ## 📂 Project Setup
 To get started with the project, follow these steps:
@@ -45,8 +43,13 @@ We welcome contributions! To contribute:
 4. Push the changes (`git push origin feature-name`)
 5. Open a Pull Request 🚀
 
-## 📜 License
-This project is licensed under the **MIT License**.
+## 🛠 Backend Repository
+
+The backend of Kidtopia is built with Laravel. You can access the repository at the following link:
+
+[Kidtopia Backend Repository](https://github.com/Equipo15-Hackathon/kidtopia.git)
+
+
 
 ---
 
