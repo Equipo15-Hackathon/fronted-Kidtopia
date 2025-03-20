@@ -1,7 +1,7 @@
 import './App.css'
 import  Cart from './components/Header/Cart/Cart'
 import  Header from './components/Header/Header'
-import { HomeView } from './pages/HomeView';
+import { HomeView } from './views/HomeView/HomeView';
 import { CartProvider } from './context/CartContext'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Contact from './views/ContactView/ContactView';
@@ -13,7 +13,8 @@ function App() {
     <CartProvider>   
       <Router>
         <Header />
-        <Cart />          
+        <Cart />
+        <HomeView />          
         <Routes>
           <Route path="/home" element={<HomeView />} />
           <Route path="/catalog" element={<CatalogView />} />
