@@ -1,0 +1,47 @@
+.catalog-view {
+  position: relative;
+  width: 100vw;
+  display: flex;
+  align-items: flex-start;
+}
+
+.catalog-container {
+  width: 100%;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.category-title {
+  margin: 0;
+}
+
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1%;
+  width: 100%;
+}
+
+
+.catalog-view.sidebar-open .catalog-container {
+  margin-left: 8vw; 
+}
+
+/* Button to open sidebar */
+.sidebar-toggle-button {
+  position: absolute;
+  top: 20px;
+  left: 80vw;
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+  z-index: 1000;
+}
+
+.sidebar-toggle-button:hover {
+  background-color: #135aba;
+}

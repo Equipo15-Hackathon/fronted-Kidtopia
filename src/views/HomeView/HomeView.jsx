@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./HomeView.css";
 
-export const HomeView = () => {
+const HomeView = () => {
 
     const images = [
         "/img/banner.png",
@@ -52,3 +52,5 @@ export const HomeView = () => {
         </div>
     );
 };
+
+export default HomeView;

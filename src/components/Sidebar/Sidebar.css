@@ -1,0 +1,35 @@
+.sidebar-container {
+  position: relative;
+  width: 0;
+  overflow: hidden;
+  transition: width 0.3s ease-in-out;
+}
+
+.sidebar-title {
+  color: #f8d1bc;
+}
+
+.sidebar-container.open {
+  width: 18vw;
+}
+
+.sidebar-list {
+  text-align: left;
+}
+.sidebar-item {
+  margin-top: 2vh;
+}
+
+.sidebar {
+  background-color: white;
+  height: 100%;
+  padding: 20px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-button {
+  position: absolute;
+  top: 10px;
+  right: 50vw;
+  background-color: black;
+}

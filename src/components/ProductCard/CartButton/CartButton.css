@@ -1,0 +1,14 @@
+.CartButton {
+    background-color: #FF5B68;
+    color: black;
+    border-radius: 10px;
+    border: none;
+    padding: 0.5em 1.2em 0.6em 1.2em;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    font-family: 'Fredoka', sans-serif;
+}
+
+.CartButton:hover {
+    background-color: #ff2537;
+}
