@@ -1,5 +1,6 @@
 import './Header.css'
 import { useCart } from '../../context/CartContext'
+import {Searcher} from "./Searcher/Searcher.jsx";
 
 export const Header = () => {
     const { toggleCart } = useCart();
@@ -15,7 +16,7 @@ export const Header = () => {
             </div>
             <div className="right-section">
                 <button className="header-button">
-                    <img src="/img/search.png" alt="search-icon" className="search-icon" />
+                    <Searcher />
                 </button>
                 <button className="header-button" onClick={toggleCart}>
                     <img src="/img/cart.png" alt="cart-icon" className="cart-icon" />
