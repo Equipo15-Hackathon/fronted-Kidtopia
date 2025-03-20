@@ -9,6 +9,11 @@
 
 .toy-img {
     width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.toy-img:hover {
+    transform: scale(1.1)
 }
 
 .name {
