@@ -1,10 +1,10 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import ImageCarousel from "../../components/Carousel/Carousel";
-import { CartButton } from "../../components/ProductCard/CartButton/CartButton.jsx"
+import CartButton from "../../components/ProductCard/CartButton/CartButton.jsx"
 import "./ProductView.css";
 
-export default function Product() {
+export default function ProductView() {
   const [productName, setProductName] = useState("");
   const [images, setImages] = useState([]);
   const [brand, setBrand] = useState("");

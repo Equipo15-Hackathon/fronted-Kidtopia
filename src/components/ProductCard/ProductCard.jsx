@@ -1,5 +1,5 @@
 import './ProductCard.css'
-import { CartButton } from "./CartButton/CartButton"
+import CartButton from "./CartButton/CartButton"
 
 export const ProductCard = ({ name, price, image }) => {
 
