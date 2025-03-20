@@ -2,11 +2,12 @@ import { useState } from "react";
 import { Icon } from "@iconify/react";
 import "./Sidebar.css";
 
-export default function Sidebar() {
+//Takes array to form categories
+export default function Sidebar(categories) {
   const [open, setOpen] = useState(false);
 
   //Data example
-  const categories = [
+  categories = [
     "Muñecas y Figuras de Acción",
     "Juegos de Construcción",
     "Juguetes Educativos",
