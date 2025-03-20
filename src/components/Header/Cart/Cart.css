@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    right: 0%;
+    right: 0;
     padding: 1.5% 3%;
     background-color: #F8D1BC;
     border-radius: 10px 0 0 10px;
@@ -90,4 +90,37 @@
 
 .total {
     margin: 5%;
+}
+
+@media screen and (max-width: 425px) {
+    .cart-container {
+        width: 100vw;
+        border-radius: 0;
+        padding: 3% 0;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .close-btn {
+        right: 5%;
+    }
+
+    .superior-container {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .product-details {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .cart-container {
+        width: 20vw;
+        padding: 2% 3%;
+        font-size: 1.25em;
+    }
 }

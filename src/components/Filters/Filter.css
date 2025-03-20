@@ -42,8 +42,9 @@
     }
   
     .filter-button {
-      max-width: 80px;
-      font-size: 12px;
+        width: 25%;
+      padding: 2% 3%;
+      font-size: 1em;
     }
   
   }

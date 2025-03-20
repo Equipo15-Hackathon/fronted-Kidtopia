@@ -56,10 +56,24 @@
     justify-content: right;
 }
 
-.search-icon {
-    
-}
-
 .cart-icon {
     width: 23px;
+}
+
+@media screen and (min-width: 1440px) {
+    .home-button {
+        font-size: 1.5em;
+    }
+
+    .logo {
+        width: 7vw;
+    }
+
+    .catalog {
+        font-size: 1.25rem;
+    }
+
+    .cart-icon {
+        width: 2.5vw;
+    }
 }

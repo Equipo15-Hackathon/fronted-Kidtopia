@@ -6,9 +6,21 @@
     padding: 0.5em 1.2em 0.6em 1.2em;
     cursor: pointer;
     transition: border-color 0.25s;
-    font-family: 'Fredoka', sans-serif;
 }
 
 .CartButton:hover {
     background-color: #ff2537;
+}
+
+@media screen and (max-width: 425px) {
+    .CartButton {
+        font-size: 1em;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .CartButton {
+        font-size: 1.2em;
+        padding: 0.5em 1em 0.6em 1em;
+    }
 }

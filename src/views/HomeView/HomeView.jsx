@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./HomeView.css";
+import Cart from "../../components/Header/Cart/Cart";
 
 const HomeView = () => {
 
@@ -22,7 +23,7 @@ const HomeView = () => {
 
     return (
         <div className="home-container">
-
+        <Cart />        
             <section className="banner">
                 <button className="prev" onClick={prevSlide}>&#10094;</button>
                 <img src={images[currentIndex]} alt="Banner" className="banner-img" />

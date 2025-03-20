@@ -15,7 +15,6 @@ function App() {
     <CartProvider>   
       <Router>
         <Header />
-        <Cart />         
         <Routes>
           <Route path="/" element={<HomeView />} />
           <Route path="/catalog" element={<CatalogView />} />

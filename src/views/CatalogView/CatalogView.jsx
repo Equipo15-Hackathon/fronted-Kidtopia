@@ -4,6 +4,7 @@ import { ProductCard } from '../../components/ProductCard/ProductCard';
 import Filter from '../../components/Filters/Filter';
 import { useFilters } from '../../../hooks/useFilters';
 import SideBar from '../../components/SideBar/SideBar';
+import Cart from "../../components/Header/Cart/Cart";
 
 const CatalogView = () => {
   const [open, setOpen] = useState(false);
@@ -31,6 +32,7 @@ const CatalogView = () => {
 
   return (
     <div className={`catalog-view ${open ? "sidebar-open" : ""}`}>
+        <Cart />         
       <button className={`categories-button ${open ? "open" : ""}`} onClick={() => setOpen(!open)}>
         {open ? "☰" : "☰ Categorías"}
       </button>
