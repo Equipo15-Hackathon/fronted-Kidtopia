@@ -2,7 +2,7 @@ import './Filter.css';
 import { useState } from 'react';
 import Dropdown from './Dropdown/Dropdown';
 
-const Filter = ({ageRange, brands}) => {
+const Filter = ({filterProducts, resetFilters}) => {
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -17,6 +17,8 @@ const Filter = ({ageRange, brands}) => {
         {isOpen && <Dropdown 
                         ageRange={["0-2 años", "3-5 años", "6-8 años", "9-12 años"]} 
                         brands={["Mattel", "Hasbro", "Fisher-Price", "Lego", "Playmobil", "Barbie"]} 
+                        filterProducts={filterProducts}
+                        resetFilters={resetFilters}
                     />
         }
         </div>
