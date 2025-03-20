@@ -6,7 +6,7 @@ const CartButton = ({ name, price }) => {
      const { addProduct } = useCart();
 
     return (
-        <button className="CartButton" onClick={() => addProduct(name, price)}>Añadir a la cesta</button>
+        <button className="add-cart-button" onClick={() => addProduct(name, price)}>Añadir a la cesta</button>
     )
 }
 

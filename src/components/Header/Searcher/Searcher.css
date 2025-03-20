@@ -1,5 +1,4 @@
 .searcher {
-    background: none;
     display: flex;
     align-items: center;
     position: relative;
@@ -11,7 +10,7 @@
 
 .searcher.open {
     transform: translateX(-10vw);
-    width: 10vw;
+    width: 15vw;
 }
 
 .search-icon {

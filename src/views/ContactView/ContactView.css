@@ -3,7 +3,6 @@
   grid-template-columns: 1fr 1fr;
   width: 100%;
   height: 100%;
-  color: black;
   top: 0;
   left: 0;
   overflow: hidden;
@@ -88,9 +87,7 @@
   font-weight: bold;
   margin-left: 4vh;
   padding: 1vh 1vw;
-  border: none;
   border-radius: 1vh;
-  cursor: pointer;
   transition: background 0.3s ease;
   width: 45vw;
   font-family: "Fredoka";
@@ -100,7 +97,6 @@
   background: #ff2537;
 }
 
-/* RESPONSIVE */
 @media (max-width: 800px) {
   .main-div {
     display: grid;

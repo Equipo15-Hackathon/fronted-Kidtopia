@@ -28,6 +28,8 @@ body::-webkit-scrollbar {
 
 button {
   cursor: pointer;
+  border: none;
+  background: none;
   font-family: 'Fredoka', sans-serif;
 }
 

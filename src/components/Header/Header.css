@@ -2,15 +2,17 @@
     display: flex;
     background-color: #FB7F0D;
     width: 100%;
-    margin: 0;
     padding: 0;
     justify-content: space-between;
 }
 
-.left-section {
+.left-section, .right-section {
     display: flex;
-    width: 50%;
     align-items: center;
+    width: 50%;
+  }
+
+.left-section {
     justify-content: left;
     gap: 5%;
     margin-left: 5px;
@@ -18,8 +20,6 @@
 
 .home-button {
     padding: 0;
-    border: none;
-    background: none;
     display: flex;
     align-items: center;
     font-family: 'Chewy', sans-serif;
@@ -28,15 +28,11 @@
 .searcher-button {
     width: fit-content;
     padding: 0;
-    border: none;
-    background: none;
 }
 
 .cart-button {
     width: 50px;
     padding: 0;
-    border: none;
-    background: none;
     margin-right: 3%;
 }
 
@@ -51,8 +47,6 @@
 }
 
 .right-section {
-    display: flex;
-    width: 50%;
     justify-content: right;
 }
 

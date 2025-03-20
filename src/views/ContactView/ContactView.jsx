@@ -28,7 +28,6 @@ export default function Contact() {
     e.preventDefault();
     let newErrors = {};
 
-    //Field validation
     if (!/^[a-zA-Z]+\s+[a-zA-Z]+$/.test(formData.fullName)) {
       newErrors.fullName =
         "Debe ingresar al menos dos palabras, no se admiten símbolos ni números.";

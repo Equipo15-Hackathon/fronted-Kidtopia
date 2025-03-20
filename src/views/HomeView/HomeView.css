@@ -28,8 +28,6 @@
     transform: translateY(-50%);
     background: rgba(0, 0, 0, 0.5);
     color: white;
-    border: none;
-    cursor: pointer;
     padding: 10px;
     font-size: 18px;
     border-radius: 50%;
@@ -129,19 +127,21 @@
   }
 }
 
-@media (min-width: 1025px) and (max-width: 1440px) {
+@media (min-width: 1025px) {
   .home-container {
-    max-width: 1200px;
+    max-width: 100vw;
     margin: auto;
   }
 
   .banner {
-    height: 400px;
+    width: 70vw;
   }
 
   .section-title {
-    font-size: 30px;
+    font-size: 2.5em;
+    margin-top: 5%;
   }
+
   .products-container {
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
