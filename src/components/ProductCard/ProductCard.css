@@ -1,6 +1,6 @@
 .product-card {
     padding: 1%;
-    width: 15%;
+    width: 13vw;
     display: flex;
     flex-direction: column;
     text-align: start;
@@ -22,4 +22,34 @@
 
 .price {
     margin: 0;
+    font-weight: normal;
 }
+@media screen and (max-width: 425px) {
+    .product-card {
+      width: 40%;
+      padding: 3%;
+    }
+  
+    .toy-img {
+      max-width: 100%;
+    }
+  
+    .name, .price {
+      font-size: 16px;
+    }
+  }
+  
+  @media screen and (min-width: 426px) and (max-width: 768px) {
+    .product-card {
+      width: 17%;
+      padding: 2%;
+    }
+  
+    .toy-img {
+      max-width: 100%;
+    }
+  
+    .name, .price {
+      font-size: 18px;
+    }
+  }

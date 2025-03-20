@@ -1,13 +1,12 @@
 .home-container {
     text-align: center;
     padding: 20px;
+    flex: 1;
 }
-
 
 .banner {
     position: relative;
     width: 100%;
-    max-width: 1200px;
     height: 400px;
     margin: auto;
     overflow: hidden;
@@ -32,6 +31,7 @@
     padding: 10px;
     font-size: 18px;
     border-radius: 50%;
+    width: 50px;
 }
 
 .prev { left: 10px; }
@@ -70,4 +70,77 @@
 .product-card img {
     width: 100%;
     border-radius: 10px;
+}
+
+@media (max-width: 425px) {
+  .home-container {
+    padding: 10px;
+    height: 100%;
+  }
+
+  .banner {
+    height: 20vh;
+  }
+
+  .banner-img {
+    object-fit: contain;
+  }
+
+  .prev, .next {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+    padding: 8px;
+    font-size: x-small;
+  }
+
+  .section-title {
+    font-size: 16px;
+    width: 90%;
+  }
+
+  .featured-products {
+    margin-top: 0;
+  }
+
+  .products-container {
+    gap: 1%;
+    align-items: center;
+  }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+  .banner {
+    height: 300px;
+  }
+
+  .prev, .next {
+    width: 45px;
+    font-size: 16px;
+  }
+
+  .products-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .home-container {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .banner {
+    height: 400px;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+  .products-container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
 }

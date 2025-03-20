@@ -28,3 +28,21 @@
   padding: 20px;
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
 }
+
+@media screen and (max-width: 425px) {
+  .sidebar {
+    padding: 1%;
+    height: 100%;
+  }
+  .sidebar-title {
+    margin: 1%;
+  }
+  .sidebar-container.open {
+    width: 100vw;
+    position: absolute;
+    z-index: 900;
+  }
+  .sidebar-list {
+    padding: 0 10%;
+  }  
+}

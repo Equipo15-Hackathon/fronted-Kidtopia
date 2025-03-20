@@ -1,18 +1,18 @@
 .footer {
     background-color: #FB7F0D;
-    padding: 10px 20px;
     display: flex;
     align-items: center;
     font-size: 14px;
     color: black;
-    bottom: 0;
     width: 100%;
     justify-content: space-between;
+    ;
 }
 
 .copyright {
     margin: 0;
     font-size: 20px;
+    padding: 1%;
 }
 
 .right-section {

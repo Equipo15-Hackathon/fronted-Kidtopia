@@ -34,3 +34,31 @@
 .filter-button:hover {
     background-color: #FB7F0D;
 }
+
+@media screen and (max-width: 425px) {
+    .filter-container {
+      width: 100%;
+      margin-right: 0;
+    }
+  
+    .filter-button {
+      max-width: 80px;
+      font-size: 12px;
+    }
+  
+  }
+  
+  @media screen and (min-width: 1440px) {
+    .filter-button {
+      width: 10vw;
+      font-size: 1.4em;
+      padding: 1% 1.5%;
+      align-items: center;
+      justify-content: space-around;
+    }
+  
+    .down-arrow {
+        padding-top: 3%;
+        width: 25%;
+    }
+  }
