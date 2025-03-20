@@ -1,18 +1,18 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Footer } from "./components/Footer/Footer";
-
+import './App.css'
+import { Cart } from './components/Header/Cart/Cart'
+import { Header } from './components/Header/Header'
+import { Searcher } from './components/Header/Searcher/Searcher'
+import { CartProvider } from './context/CartContext'
 function App() {
-    return (
-        <Router>
-            <Routes>
-            </Routes>
-            <Footer />
-        </Router>
-    );
+
+
+  return (
+    <CartProvider>
+      <Header />
+      <Searcher />
+      <Cart />
+    </CartProvider>
+  )
 }
 
-const Contact = () => <h1>Formulario de Contacto (Próximamente)</h1>;
-
-export default App;
-
-
+export default App
