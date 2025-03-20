@@ -11,10 +11,8 @@ Kidtopia is a user-friendly platform where buyers and sellers can connect to pur
 - 🔍 **Advanced Search & Filters** – Easily find your favorite toys.
 
 ## 🏗️ Tech Stack
-- **Frontend:** React (Vite) ⚛️
-- **Backend:** (To be defined)
-- **Database:** (To be defined)
-- **Deployment:** (To be defined)
+- **Frontend:** React (Vite), JavaScript, CSS, HTML
+- **Backend:** PHP, XAMPP, Laravel
 
 ## 📂 Project Setup
 To get started with the project, follow these steps:
