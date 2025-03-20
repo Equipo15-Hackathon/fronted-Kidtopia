@@ -1,64 +1,35 @@
 .sidebar-container {
   position: relative;
+  width: 0;
+  overflow: hidden;
+  transition: width 0.3s ease-in-out;
+}
+
+.sidebar-title {
+  color: #f8d1bc;
+}
+
+.sidebar-container.open {
+  width: 18vw;
+}
+
+.sidebar-list {
+  text-align: left;
+}
+.sidebar-item {
+  margin-top: 2vh;
+}
+
+.sidebar {
+  background-color: white;
   height: 100%;
+  padding: 20px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .toggle-button {
   position: absolute;
-  top: 2vh;
-  left: 70vw;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 2.5vh;
-  color: black;
-}
-
-.sidebar {
-  position: relative;
-  top: 0;
-  left: 0;
-  height: 100%;
-  background-color: white;
-  color: black;
-  padding: 2vh;
-  box-shadow: 0.5vw 0 1vw rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease-in-out;
-}
-
-.sidebar.open {
-  transform: translateX(0);
-  width: 15vw;
-}
-
-.sidebar.closed {
-  transform: translateX(-100%);
-  width: 0;
-}
-
-.sidebar-title {
-  font-size: 3vh;
-  font-weight: bold;
-  margin-bottom: 2vh;
-  font-family: "Chewy";
-  color: #f8d1bc;
-}
-
-.sidebar-list {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar-item {
-  display: flex;
-  align-items: center;
-  gap: 1vw;
-  padding: 1.5vh;
-  cursor: pointer;
-  border-radius: 1vh;
-  transition: background 0.2s;
-}
-
-.sidebar-item:hover {
-  background-color: grey;
+  top: 10px;
+  right: 50vw;
+  background-color: black;
 }
