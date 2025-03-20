@@ -6,16 +6,17 @@ export const Cart = () => {
     
     if (!isCartOpen) return null;
 
-    const total = Object.values(cartItems).length
+    const total = Object.values(cartItems)
     ? Object.values(cartItems).reduce((acc, item) => acc + item.price * item.quantity, 0).toFixed(2)
     : "0.00";
 
     return (
         <div className="cart-container">
-            <h2 className="title">Mi cesta</h2>
+            <div className="superior-container">
             <button className="close-btn" onClick={toggleCart}>
                 <img src="/img/close-icon.png" alt="close-icon" className="close-cart" />
             </button>
+            <h2 className="title">Mi cesta</h2>
             {Object.entries(cartItems).map(([name, { price, quantity }]) => (
                 <div key={name} className="product-container">
                     <div className="product-details">
@@ -36,6 +37,7 @@ export const Cart = () => {
                     </div>
                 </div>
             ))}
+            </div>
             <h3 className="total">Total: {total}€</h3>
         </div>
     );
