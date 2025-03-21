@@ -1,10 +1,10 @@
 import { Icon } from "@iconify/react";
-import { categories } from "../../services/temporal/localProducts";
+import { categories as localCategories } from "../../services/temporal/localProducts";
 import "./Sidebar.css";
-/* import { useEffect, useState } from "react";
-import { categoriesRequest } from "../../services/api/categories"; */
+import { useEffect, useState } from "react";
+import { categoriesRequest } from "../../services/api/categories";
 
-/* export default function Sidebar({ open, setOpen, setSelectedCategory }) {
+export default function Sidebar({ open, setOpen, setSelectedCategory }) {
 
   const [categories, setCategories] = useState([]);
   
@@ -12,13 +12,14 @@ import { categoriesRequest } from "../../services/api/categories"; */
     const fetchCategories = async () => {
       const data = await categoriesRequest.getCategories();
       if (data) {
-        setCategories(data);
+        setCategories([...localCategories, ...data]); 
+      } else {
+        setCategories(localCategories);
       }
-    };
+  };
+  fetchCategories();
+  }, []);
 
-    fetchCategories();
-  }, []); */
-  export default function Sidebar({ open, setOpen, setSelectedCategory }) {
 
   return (
     <div className={`sidebar-container ${open ? "open" : ""}`}>

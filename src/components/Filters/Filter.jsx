@@ -1,7 +1,7 @@
 import './Filter.css';
 import { useState, useEffect } from 'react';
 import Dropdown from './Dropdown/Dropdown';
-/* import { brandsRequest } from '../../services/api/brands';
+import { brandsRequest } from '../../services/api/brands';
 
 const Filter = ({filterProducts, resetFilters}) => {
 
@@ -17,15 +17,10 @@ const Filter = ({filterProducts, resetFilters}) => {
         };
 
         fetchBrands();
-    }, []); */
+    }, []); 
 
 
 
-
-
-    const Filter = ({filterProducts, resetFilters}) => {
-
-    const [isOpen, setIsOpen] = useState(false);
 
     return (
         <div className='filter-container'>
