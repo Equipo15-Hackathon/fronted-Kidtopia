@@ -51,7 +51,11 @@ The backend of Kidtopia is built with Laravel. You can access the repository at 
 
 [Kidtopia Backend Repository](https://github.com/Equipo15-Hackathon/kidtopia.git)
 
+**API connection**
 
+To connect with the Back-end repository you can do it from branch **feature/catalogview-api**. There you can find the api's connection implemented to the catalog and the side bar. 
+
+You can pull from main or dev and try whatever you want!
 
 ---
 
