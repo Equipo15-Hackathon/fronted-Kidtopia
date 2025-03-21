@@ -6,6 +6,8 @@ const Cart = () => {
     
     if (!isCartOpen) return null;
 
+    console.log(cartItems);
+
     const total = Object.values(cartItems)
     ? Object.values(cartItems).reduce((acc, item) => acc + item.price * item.quantity, 0).toFixed(2)
     : "0.00";
@@ -21,7 +23,7 @@ const Cart = () => {
                 <div key={name} className="product-container">
                     <div className="product-details">
                         <h3 className="toy-name">{name}</h3>
-                        <h3 className="toy-price">{price.toFixed(2)}€</h3>
+                        <h3 className="toy-price">{Number(price).toFixed(2)}€</h3>
                     </div>
                     <div className="quantity-container">
                         <div className="quantity-selection">

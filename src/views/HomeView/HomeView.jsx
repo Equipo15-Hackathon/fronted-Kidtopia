@@ -1,7 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { productsRequest} from "../../services/api/products";
+import {ProductCard} from "../../components/ProductCard/ProductCard";
 import "./HomeView.css";
 
 const HomeView = () => {
+    const [featuredProducts, setFeaturedProducts] = useState([]);
+
+    useEffect(() => {
+        const fetchProducts = async () => {
+            const data = await productsRequest.getProducts();
+            if (data) {
+                setFeaturedProducts(data.slice(0, 4));
+            }
+        };
+        fetchProducts();
+    }, []);
 
     const images = [
         "/img/banner.png",
@@ -10,11 +23,9 @@ const HomeView = () => {
 
     const [currentIndex, setCurrentIndex] = useState(0);
 
-
     const nextSlide = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
     };
-
 
     const prevSlide = () => {
         setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
@@ -22,31 +33,24 @@ const HomeView = () => {
 
     return (
         <div className="home-container">
-
             <section className="banner">
                 <button className="prev" onClick={prevSlide}>&#10094;</button>
                 <img src={images[currentIndex]} alt="Banner" className="banner-img" />
                 <button className="next" onClick={nextSlide}>&#10095;</button>
             </section>
 
-
             <section className="featured-products">
                 <h2 className="section-title">Destacados</h2>
                 <div className="products-container">
-                    <div className="product-card">
-                        <img src="/img/bloques.png" alt="Set Bloques Magnéticos" />
-                        <p>Set Bloques Magnéticos</p>
-                    </div>
-
-                    <div className="product-card">
-                        <img src="/img/dinosaurio.png" alt="Figuras Dinosaurios Táctiles" />
-                        <p>Figuras Dinosaurios Táctiles</p>
-                    </div>
-
-                    <div className="product-card">
-                        <img src="/img/slime.png" alt="Laboratorio de Slime" />
-                        <p>Laboratorio de Slime</p>
-                    </div>
+                    {featuredProducts.map((product) => (
+                        <ProductCard 
+                            key={product.id}
+                            id={product.id}
+                            name={product.name}
+                            image={product.image}
+                            price={product.price}
+                        />
+                    ))}
                 </div>
             </section>
         </div>
