@@ -19,7 +19,7 @@ export default function ProductView() {
   const featuresHeader = "Características Técnicas";
 
   useEffect(() => {
-    //test data
+  
     setProductName("Juguete 1");
     setImages([
       "https://www.toysrus.es/medias/?context=bWFzdGVyfHByb2R1Y3RfaW1hZ2VzfDgwNjE1fGltYWdlL2pwZWd8YUdSakwyaG1NeTh4TmpneE5ERTBNalU0TmpreE1BfGVkNzQ0OWE5MjIwN2U3MzIxMmFhOWI5YTliMTk4NTk4NTU2N2FiZDMyNzg5ODZmMmUzMTJjZjc0OTEwYWRkNmE",

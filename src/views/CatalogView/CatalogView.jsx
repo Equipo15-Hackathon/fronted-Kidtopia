@@ -3,10 +3,10 @@ import { useState } from 'react';
 import { toys } from '../../services/temporal/localProducts';
 import { ProductCard } from '../../components/ProductCard/ProductCard';
 import Filter from '../../components/Filters/Filter';
-import { useFilters } from '../../../hooks/useFilters';
-import SideBar from '../../components/SideBar/SideBar';
+import { useFilters } from '../../hooks/useFilters';
+import SideBar from '../../components/Sidebar/Sidebar';
 import Cart from "../../components/Header/Cart/Cart";
-import { useProducts } from '../../../hooks/useProducts';
+import { useProducts } from '../../hooks/useProducts';
 
 const CatalogView = () => {
   const [open, setOpen] = useState(false);
@@ -18,9 +18,6 @@ const CatalogView = () => {
   const productsToDisplay = selectedCategory
     ? filteredProducts.filter(toy => toy.category === selectedCategory)
     : filteredProducts;
-    
-  /* if (loading) return <p>Cargando productos...</p>;
-  if (error) return <p>{error}</p>; */
 
   return (
     <div className={`catalog-view ${open ? "sidebar-open" : ""}`}>

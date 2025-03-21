@@ -4,9 +4,9 @@ import "./Sidebar.css";
 /* import { useEffect, useState } from "react";
 import { categoriesRequest } from "../../services/api/categories"; */
 
-export default function Sidebar({ open, setOpen, setSelectedCategory }) {
+/* export default function Sidebar({ open, setOpen, setSelectedCategory }) {
 
-/*   const [categories, setCategories] = useState([]);
+  const [categories, setCategories] = useState([]);
   
   useEffect(() => {
     const fetchCategories = async () => {
@@ -18,6 +18,7 @@ export default function Sidebar({ open, setOpen, setSelectedCategory }) {
 
     fetchCategories();
   }, []); */
+  export default function Sidebar({ open, setOpen, setSelectedCategory }) {
 
   return (
     <div className={`sidebar-container ${open ? "open" : ""}`}>
