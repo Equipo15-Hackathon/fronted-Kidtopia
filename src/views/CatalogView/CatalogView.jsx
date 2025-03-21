@@ -1,34 +1,26 @@
 import './CatalogView.css';
 import { useState } from 'react';
+import { toys } from '../../services/temporal/localProducts';
 import { ProductCard } from '../../components/ProductCard/ProductCard';
 import Filter from '../../components/Filters/Filter';
 import { useFilters } from '../../../hooks/useFilters';
 import SideBar from '../../components/SideBar/SideBar';
 import Cart from "../../components/Header/Cart/Cart";
+import { useProducts } from '../../../hooks/useProducts';
 
 const CatalogView = () => {
   const [open, setOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState(null);
 
-  const products = [
-    { category: "Muñecas y Figuras de Acción", name: "Muñeca", price: 10.99, image: "/img/doll.png", ageRange: "3-5 años", brand: "Mattel" },
-    { category: "Juegos de Mesa", name: "Carro", price: 15.50, image: "/img/cart-toy.png", ageRange: "0-2 años", brand: "Hasbro" },
-    { category: "Vehículos y Pistas", name: "Coche", price: 19.99, image: "/img/car.png", ageRange: "6-8 años", brand: "Fisher-Price" },
-    { category: "Juegos de Construcción", name: "Patata", price: 10.99, image: "/img/doll.png", ageRange: "9-12 años", brand: "Lego" },
-    { category: "Juguetes Educativos", name: "Patata1", price: 15.50, image: "/img/cart-toy.png", ageRange: "0-2 años", brand: "Playmobil" },
-    { category: "Juguetes Electrónicos", name: "Patata2", price: 19.99, image: "/img/car.png", ageRange: "6-8 años", brand: "Barbie" },
-    { category: "Peluches y Marionetas", name: "Patata3", price: 10.99, image: "/img/doll.png", ageRange: "3-5 años", brand: "Mattel" },
-    { category: "Arte y Manualidades", name: "Patata4", price: 15.50, image: "/img/cart-toy.png", ageRange: "9-12 años", brand: "Hasbro" },
-    { category: "Instrumentos Musicales", name: "Patata5", price: 19.99, image: "/img/car.png", ageRange: "6-8 años", brand: "Playmobil" },
-    { category: "Muñecas y Figuras de Acción", name: "Patata6", price: 10.99, image: "/img/doll.png", ageRange: "3-5 años", brand: "Mattel" },
-    { category: "Muñecas y Figuras de Acción", name: "Patata7", price: 15.50, image: "/img/cart-toy.png", ageRange: "0-2 años", brand: "Hasbro" },
-    { category: "Muñecas y Figuras de Acción", name: "Patata8", price: 19.99, image: "/img/car.png", ageRange: "9-12 años", brand: "Fisher-Price" },
-  ];
+  const { products, loading, error } = useProducts();  
 
-  const { filteredProducts, filterProducts, resetFilters } = useFilters(products);
+  const { filteredProducts, filterProducts, resetFilters } = useFilters(toys);
   const productsToDisplay = selectedCategory
-    ? filteredProducts.filter(product => product.category === selectedCategory)
+    ? filteredProducts.filter(toy => toy.category === selectedCategory)
     : filteredProducts;
+    
+  /* if (loading) return <p>Cargando productos...</p>;
+  if (error) return <p>{error}</p>; */
 
   return (
     <div className={`catalog-view ${open ? "sidebar-open" : ""}`}>
@@ -44,9 +36,9 @@ const CatalogView = () => {
         <Filter filterProducts={filterProducts} resetFilters={resetFilters} />
 
         <div className="products-container">
-          {productsToDisplay.map((product) => (
-            <ProductCard key={product.name} {...product} />
-          ))}
+        {(productsToDisplay.length > 0 ? productsToDisplay : toys).map((toy) => (
+          <ProductCard key={toy.id || toy.name} {...toy} />
+        ))}
         </div>
       </div>
     </div>

@@ -1,6 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./HomeView.css";
 import Cart from "../../components/Header/Cart/Cart";
+import { productsRequest } from "../../services/api/products";
+import { toys } from "../../services/temporal/localProducts";
+import { ProductCard } from "../../components/ProductCard/ProductCard";
 
 const HomeView = () => {
 
@@ -10,12 +13,21 @@ const HomeView = () => {
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [featuredProducts, setFeaturedProducts] = useState([]);
 
+    useEffect(() => {
+        const fetchProducts = async () => {
+            const data = await productsRequest.getProducts();
+            if (data) {
+                setFeaturedProducts(data.slice(0, 3));
+            }
+        };
+        fetchProducts();
+    }, []);
 
     const nextSlide = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
     };
-
 
     const prevSlide = () => {
         setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
@@ -34,21 +46,16 @@ const HomeView = () => {
             <section className="featured-products">
                 <h2 className="section-title">Destacados</h2>
                 <div className="products-container">
-                    <div className="product-card">
-                        <img src="/img/bloques.png" alt="Set Bloques Magnéticos" />
-                        <p>Set Bloques Magnéticos</p>
+                {(featuredProducts.length > 0 ? featuredProducts.slice(0, 4) : toys).slice(0, 4).map((product) => (
+                        <ProductCard 
+                            key={product.id}
+                            id={product.id}
+                            name={product.name}
+                            image={product.image}
+                            price={product.price}
+                        />
+                    ))}
                     </div>
-
-                    <div className="product-card">
-                        <img src="/img/dinosaurio.png" alt="Figuras Dinosaurios Táctiles" />
-                        <p>Figuras Dinosaurios Táctiles</p>
-                    </div>
-
-                    <div className="product-card">
-                        <img src="/img/slime.png" alt="Laboratorio de Slime" />
-                        <p>Laboratorio de Slime</p>
-                    </div>
-                </div>
             </section>
         </div>
     );

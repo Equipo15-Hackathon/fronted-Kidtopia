@@ -1,21 +1,23 @@
 import { Icon } from "@iconify/react";
+import { categories } from "../../services/temporal/localProducts";
 import "./Sidebar.css";
+/* import { useEffect, useState } from "react";
+import { categoriesRequest } from "../../services/api/categories"; */
 
 export default function Sidebar({ open, setOpen, setSelectedCategory }) {
-  const categories = [
-    "Muñecas y Figuras de Acción",
-    "Juegos de Construcción",
-    "Juguetes Educativos",
-    "Vehículos y Pistas",
-    "Juegos de Mesa",
-    "Juguetes Electrónicos",
-    "Peluches y Marionetas",
-    "Arte y Manualidades",
-    "Deportes y Aire Libre",
-    "Instrumentos Musicales",
-    "Robótica y Programación",
-    "Juguetes para Bebés",
-  ];
+
+/*   const [categories, setCategories] = useState([]);
+  
+  useEffect(() => {
+    const fetchCategories = async () => {
+      const data = await categoriesRequest.getCategories();
+      if (data) {
+        setCategories(data);
+      }
+    };
+
+    fetchCategories();
+  }, []); */
 
   return (
     <div className={`sidebar-container ${open ? "open" : ""}`}>
